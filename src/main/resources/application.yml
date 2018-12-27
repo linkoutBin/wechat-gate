@@ -1,0 +1,24 @@
+#服务器配置
+spring:
+  application:
+    name: wechat-gate
+
+server:
+  port: 8088
+  servlet:
+    context-path: /wechatgate
+
+logging:
+  level:
+    root: info
+  file: /home/xubin/logs/wechatgate.log
+
+#微信配置
+wechat:
+  openid: gh_d1e43c0a8bd4
+  appid: wx4b4ec5e34f08b080
+  secret: 5d67367804f8c514240dcfe5cc30aa8d
+  token: testfork
+  access_token:
+    url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${wechat.appid}&secret=${wechat.secret}
+
