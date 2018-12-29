@@ -57,13 +57,14 @@ public class WechatMessageController {
         if (signature.equalsIgnoreCase(sign)) {
             logger.info("微信服务器消息来源验证通过");
             String body = dealWithRequestBody(request);
-            return null == body ? body : wechatMessageProcess(body);
+            return StringUtils.isEmpty(body) ? null : wechatMessageProcess(body);
         }
         logger.error("微信服务器消息来源验证失败,【{}】", request.getQueryString());
         return null;
     }
 
     private String wechatMessageProcess(String body) {
+
         return null;
     }
 

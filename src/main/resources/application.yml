@@ -1,24 +1,30 @@
 #服务器配置
-spring:
-  application:
-    name: wechat-gate
-
 server:
   port: 8088
   servlet:
     context-path: /wechatgate
 
-logging:
-  level:
-    root: info
-  file: /home/xubin/logs/wechatgate.log
+spring:
+  application:
+    name: wechat-gate
+  redis:
+    host: 127.0.0.1
+    password: 123456
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 2
+        max-wait: 1ms
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/wechat?useUnicode=true&amp;characterEncoding=UTF-8&useSSL=false
+    password: 1234567
 
 #微信配置
 wechat:
-  openid: gh_d1e43c0a8bd4
-  appid: wx4b4ec5e34f08b080
-  secret: 5d67367804f8c514240dcfe5cc30aa8d
   token: testfork
   access_token:
-    url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=${wechat.appid}&secret=${wechat.secret}
-
+    #获取access_token请求URL
+    url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s
