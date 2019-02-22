@@ -1,0 +1,1193 @@
+2019-02-20 11:29:31.540  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration:308 : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testfork.wechatgate.CollectionTest], using SpringBootContextLoader
+2019-02-20 11:29:31.590  INFO   --- [main] rk.test.context.support.AbstractContextLoader.generateDefaultLocations:264 : Could not detect default resource locations for test class [com.testfork.wechatgate.CollectionTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-20 11:29:31.610  INFO   --- [main] xt.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 : Could not detect default configuration classes for test class [com.testfork.wechatgate.CollectionTest]: CollectionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-20 11:29:32.306  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:244 : Found @SpringBootConfiguration com.testfork.wechatgate.WechatGateApplication for test class com.testfork.wechatgate.CollectionTest
+2019-02-20 11:29:32.783  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-20 11:29:33.241  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getTestExecutionListeners:177 : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d9d0818, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@221a3fa4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@451001e5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2b40ff9c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3e08ff24, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4d1c005e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8462f31, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@24569dba, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5ddeb7cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@70ed52de, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@496bc455, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@59402b8f]
+2019-02-20 11:29:35.757  INFO 3429 --- [main] com.testfork.wechatgate.CollectionTest       .logStarting:50 : Starting CollectionTest on xubin.local with PID 3429 (started by xingshulin in /Users/xingshulin/ownCode/wechatgate)
+2019-02-20 11:29:35.758  INFO 3429 --- [main] com.testfork.wechatgate.CollectionTest       .logStartupProfileInfo:659 : No active profile set, falling back to default profiles: default
+2019-02-20 11:29:35.906  INFO 3429 --- [main] .context.support.GenericWebApplicationContext.prepareRefresh:590 : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3daf7722: startup date [Wed Feb 20 11:29:35 CST 2019]; root of context hierarchy
+2019-02-20 11:29:38.517  INFO 3429 --- [main] sitory.config.RepositoryConfigurationDelegate.multipleStoresDetected:163 : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-02-20 11:29:39.824  INFO 3429 --- [main] RegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:328 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6668c35d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-20 11:29:40.362  INFO 3429 --- [main] org.redisson.Version                         .logVersion:41 : Redisson 3.5.4
+2019-02-20 11:29:40.842 ERROR 3429 --- [redisson-netty-1-1] redisson.connection.pool.MasterConnectionPool.checkForReconnect:331 : host /127.0.0.1:6379 disconnected due to failedAttempts=3 limit reached
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /127.0.0.1:6379
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused
+	... 11 common frames omitted
+
+2019-02-20 11:29:43.080  WARN 3429 --- [main] .context.support.GenericWebApplicationContext.refresh:558 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonConfig' defined in file [/Users/xingshulin/ownCode/wechatgate/target/classes/com/testfork/wechatgate/config/RedissonConfig.class]: Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+2019-02-20 11:29:43.123  INFO 3429 --- [main] ging.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport:101 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-02-20 11:29:43.135 ERROR 3429 --- [main] org.springframework.boot.SpringApplication   .reportFailure:842 : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonConfig' defined in file [/Users/xingshulin/ownCode/wechatgate/target/classes/com/testfork/wechatgate/config/RedissonConfig.class]: Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: java.lang.ExceptionInInitializerError: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:170)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1224)
+	... 40 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: /127.0.0.1:6379
+	at org.redisson.connection.pool.ConnectionPool$2$1.operationComplete(ConnectionPool.java:136)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:511)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:485)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:424)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:121)
+	at org.redisson.misc.RedissonPromise.tryFailure(RedissonPromise.java:98)
+	at org.redisson.connection.pool.ConnectionPool.promiseFailure(ConnectionPool.java:304)
+	at org.redisson.connection.pool.ConnectionPool.access$400(ConnectionPool.java:52)
+	at org.redisson.connection.pool.ConnectionPool$4.operationComplete(ConnectionPool.java:274)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:511)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:504)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:483)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:424)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:121)
+	at org.redisson.misc.RedissonPromise.tryFailure(RedissonPromise.java:98)
+	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:235)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /127.0.0.1:6379
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	... 3 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	... 11 common frames omitted
+
+2019-02-20 11:29:43.165 ERROR 3429 --- [main] ringframework.test.context.TestContextManager.prepareTestInstance:250 : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7d9d0818] to prepare test instance [com.testfork.wechatgate.CollectionTest@38fc5554]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonConfig' defined in file [/Users/xingshulin/ownCode/wechatgate/target/classes/com/testfork/wechatgate/config/RedissonConfig.class]: Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+Caused by: java.lang.ExceptionInInitializerError: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:170)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1224)
+	... 40 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: /127.0.0.1:6379
+	at org.redisson.connection.pool.ConnectionPool$2$1.operationComplete(ConnectionPool.java:136)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:511)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:485)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:424)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:121)
+	at org.redisson.misc.RedissonPromise.tryFailure(RedissonPromise.java:98)
+	at org.redisson.connection.pool.ConnectionPool.promiseFailure(ConnectionPool.java:304)
+	at org.redisson.connection.pool.ConnectionPool.access$400(ConnectionPool.java:52)
+	at org.redisson.connection.pool.ConnectionPool$4.operationComplete(ConnectionPool.java:274)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:511)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:504)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:483)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:424)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:121)
+	at org.redisson.misc.RedissonPromise.tryFailure(RedissonPromise.java:98)
+	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:235)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /127.0.0.1:6379
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	... 3 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	... 11 common frames omitted
+
+2019-02-20 11:31:39.053  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration:308 : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testfork.wechatgate.CollectionTest], using SpringBootContextLoader
+2019-02-20 11:31:39.081  INFO   --- [main] rk.test.context.support.AbstractContextLoader.generateDefaultLocations:264 : Could not detect default resource locations for test class [com.testfork.wechatgate.CollectionTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-20 11:31:39.083  INFO   --- [main] xt.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 : Could not detect default configuration classes for test class [com.testfork.wechatgate.CollectionTest]: CollectionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-20 11:31:39.432  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:244 : Found @SpringBootConfiguration com.testfork.wechatgate.WechatGateApplication for test class com.testfork.wechatgate.CollectionTest
+2019-02-20 11:31:39.734  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-20 11:31:40.071  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getTestExecutionListeners:177 : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@433defed, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@2a693f59, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3f4faf53, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7fd50002, org.springframework.test.context.support.DirtiesContextTestExecutionListener@533bda92, org.springframework.test.context.transaction.TransactionalTestExecutionListener@304bb45b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@723ca036, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@25be7b63, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@28dcca0c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@45d84a20, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@52f27fbd, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@4c163e3]
+2019-02-20 11:31:41.262  INFO 3441 --- [main] com.testfork.wechatgate.CollectionTest       .logStarting:50 : Starting CollectionTest on xubin.local with PID 3441 (started by xingshulin in /Users/xingshulin/ownCode/wechatgate)
+2019-02-20 11:31:41.268  INFO 3441 --- [main] com.testfork.wechatgate.CollectionTest       .logStartupProfileInfo:659 : No active profile set, falling back to default profiles: default
+2019-02-20 11:31:41.300  INFO 3441 --- [main] .context.support.GenericWebApplicationContext.prepareRefresh:590 : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3abada5a: startup date [Wed Feb 20 11:31:41 CST 2019]; root of context hierarchy
+2019-02-20 11:31:42.927  INFO 3441 --- [main] sitory.config.RepositoryConfigurationDelegate.multipleStoresDetected:163 : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-02-20 11:31:43.856  INFO 3441 --- [main] RegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:328 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ff3e059a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-20 11:31:44.242  INFO 3441 --- [main] org.redisson.Version                         .logVersion:41 : Redisson 3.5.4
+2019-02-20 11:31:44.571 ERROR 3441 --- [redisson-netty-1-8] redisson.connection.pool.MasterConnectionPool.checkForReconnect:331 : host /127.0.0.1:6379 disconnected due to failedAttempts=3 limit reached
+
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /127.0.0.1:6379
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused
+	... 11 common frames omitted
+
+2019-02-20 11:31:46.819  WARN 3441 --- [main] .context.support.GenericWebApplicationContext.refresh:558 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonConfig' defined in file [/Users/xingshulin/ownCode/wechatgate/target/classes/com/testfork/wechatgate/config/RedissonConfig.class]: Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+2019-02-20 11:31:46.870  INFO 3441 --- [main] ging.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport:101 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-02-20 11:31:46.874 ERROR 3441 --- [main] org.springframework.boot.SpringApplication   .reportFailure:842 : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonConfig' defined in file [/Users/xingshulin/ownCode/wechatgate/target/classes/com/testfork/wechatgate/config/RedissonConfig.class]: Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: java.lang.ExceptionInInitializerError: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:170)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1224)
+	... 40 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: /127.0.0.1:6379
+	at org.redisson.connection.pool.ConnectionPool$2$1.operationComplete(ConnectionPool.java:136)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:511)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:485)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:424)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:121)
+	at org.redisson.misc.RedissonPromise.tryFailure(RedissonPromise.java:98)
+	at org.redisson.connection.pool.ConnectionPool.promiseFailure(ConnectionPool.java:304)
+	at org.redisson.connection.pool.ConnectionPool.access$400(ConnectionPool.java:52)
+	at org.redisson.connection.pool.ConnectionPool$4.operationComplete(ConnectionPool.java:274)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:511)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:504)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:483)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:424)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:121)
+	at org.redisson.misc.RedissonPromise.tryFailure(RedissonPromise.java:98)
+	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:235)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /127.0.0.1:6379
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	... 3 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	... 11 common frames omitted
+
+2019-02-20 11:31:46.880 ERROR 3441 --- [main] ringframework.test.context.TestContextManager.prepareTestInstance:250 : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@433defed] to prepare test instance [com.testfork.wechatgate.CollectionTest@161f6623]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redissonConfig' defined in file [/Users/xingshulin/ownCode/wechatgate/target/classes/com/testfork/wechatgate/config/RedissonConfig.class]: Instantiation of bean failed; nested exception is java.lang.ExceptionInInitializerError
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1232)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1131)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+Caused by: java.lang.ExceptionInInitializerError: null
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:170)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1224)
+	... 40 common frames omitted
+Caused by: org.redisson.client.RedisConnectionException: Unable to connect to Redis server: /127.0.0.1:6379
+	at org.redisson.connection.pool.ConnectionPool$2$1.operationComplete(ConnectionPool.java:136)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:511)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:485)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:424)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:121)
+	at org.redisson.misc.RedissonPromise.tryFailure(RedissonPromise.java:98)
+	at org.redisson.connection.pool.ConnectionPool.promiseFailure(ConnectionPool.java:304)
+	at org.redisson.connection.pool.ConnectionPool.access$400(ConnectionPool.java:52)
+	at org.redisson.connection.pool.ConnectionPool$4.operationComplete(ConnectionPool.java:274)
+	at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:511)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:504)
+	at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:483)
+	at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:424)
+	at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:121)
+	at org.redisson.misc.RedissonPromise.tryFailure(RedissonPromise.java:98)
+	at org.redisson.client.RedisClient$1$2.run(RedisClient.java:235)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:163)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:404)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:463)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:886)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /127.0.0.1:6379
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:325)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:340)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:633)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:580)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:497)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:459)
+	... 3 common frames omitted
+Caused by: java.net.ConnectException: Connection refused
+	... 11 common frames omitted
+
+2019-02-20 11:33:41.252  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration:308 : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testfork.wechatgate.CollectionTest], using SpringBootContextLoader
+2019-02-20 11:33:41.264  INFO   --- [main] rk.test.context.support.AbstractContextLoader.generateDefaultLocations:264 : Could not detect default resource locations for test class [com.testfork.wechatgate.CollectionTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-20 11:33:41.266  INFO   --- [main] xt.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 : Could not detect default configuration classes for test class [com.testfork.wechatgate.CollectionTest]: CollectionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-20 11:33:41.555  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:244 : Found @SpringBootConfiguration com.testfork.wechatgate.WechatGateApplication for test class com.testfork.wechatgate.CollectionTest
+2019-02-20 11:33:41.933  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-20 11:33:42.333  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getTestExecutionListeners:177 : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d9d0818, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@221a3fa4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@451001e5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2b40ff9c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3e08ff24, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4d1c005e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8462f31, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@24569dba, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5ddeb7cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@70ed52de, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@496bc455, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@59402b8f]
+2019-02-20 11:33:43.486  INFO 3460 --- [main] com.testfork.wechatgate.CollectionTest       .logStarting:50 : Starting CollectionTest on xubin.local with PID 3460 (started by xingshulin in /Users/xingshulin/ownCode/wechatgate)
+2019-02-20 11:33:43.487  INFO 3460 --- [main] com.testfork.wechatgate.CollectionTest       .logStartupProfileInfo:659 : No active profile set, falling back to default profiles: default
+2019-02-20 11:33:43.557  INFO 3460 --- [main] .context.support.GenericWebApplicationContext.prepareRefresh:590 : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3daf7722: startup date [Wed Feb 20 11:33:43 CST 2019]; root of context hierarchy
+2019-02-20 11:33:44.721  INFO 3460 --- [main] sitory.config.RepositoryConfigurationDelegate.multipleStoresDetected:163 : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-02-20 11:33:45.813  INFO 3460 --- [main] RegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:328 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$90cd6421] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-20 11:33:46.331  INFO 3460 --- [main] org.redisson.Version                         .logVersion:41 : Redisson 3.5.4
+2019-02-20 11:33:46.731  INFO 3460 --- [redisson-netty-1-3] on.connection.pool.MasterPubSubConnectionPool.operationComplete:143 : 1 connections initialized for /127.0.0.1:6379
+2019-02-20 11:33:46.732  INFO 3460 --- [redisson-netty-1-1] redisson.connection.pool.MasterConnectionPool.operationComplete:143 : 10 connections initialized for /127.0.0.1:6379
+2019-02-20 11:33:48.284  INFO 3460 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:33:49.267  INFO 3460 --- [main] ethod.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache:574 : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3daf7722: startup date [Wed Feb 20 11:33:43 CST 2019]; root of context hierarchy
+2019-02-20 11:33:49.495  INFO 3460 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/resource/same/{id}]}" onto public com.testfork.wechatgate.domain.ResultInfo com.testfork.wechatgate.controller.DistributeLockController.forSameResource(java.lang.Integer)
+2019-02-20 11:33:49.501  INFO 3460 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/wx/sign]}" onto public java.lang.String com.testfork.wechatgate.controller.WechatMessageController.verify(javax.servlet.http.HttpServletRequest) throws com.testfork.wechatgate.exception.BusinessException
+2019-02-20 11:33:49.511  INFO 3460 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-20 11:33:49.517  INFO 3460 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-20 11:33:49.580  INFO 3460 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:33:49.581  INFO 3460 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:33:50.507  INFO 3460 --- [main] notation.ScheduledAnnotationBeanPostProcessor.finishRegistration:275 : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-20 11:33:50.537  INFO 3460 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:46 : 定时执行刷新微信TOKEN任务:请求URL-https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s
+2019-02-20 11:33:50.551  INFO 3460 --- [main] com.testfork.wechatgate.CollectionTest       .logStarted:59 : Started CollectionTest in 8.055 seconds (JVM running for 11.147)
+2019-02-20 11:33:50.604  INFO 3460 --- [pool-3-thread-1] com.zaxxer.hikari.HikariDataSource           .getConnection:110 : HikariPool-1 - Starting...
+2019-02-20 11:33:52.238 ERROR 3460 --- [pool-3-thread-1] com.zaxxer.hikari.pool.HikariPool            .throwPoolInitializationException:567 : HikariPool-1 - Exception during pool initialization.
+
+com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:371)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:446)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:456)
+	at com.testfork.wechatgate.dao.impl.WechatDaoImpl.getAppInfos(WechatDaoImpl.java:31)
+	at com.testfork.wechatgate.dao.impl.WechatDaoImpl$$FastClassBySpringCGLIB$$9071104a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.testfork.wechatgate.dao.impl.WechatDaoImpl$$EnhancerBySpringCGLIB$$322cb263.getAppInfos(<generated>)
+	at com.testfork.wechatgate.task.WechatTokenTask.RefreshAccessToken(WechatTokenTask.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 49 common frames omitted
+
+2019-02-20 11:33:52.266 ERROR 3460 --- [pool-3-thread-1] eduling.support.TaskUtils$LoggingErrorHandler.handleError:96 : Unexpected error occurred in scheduled task.
+
+org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:371)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:446)
+	at org.springframework.jdbc.core.JdbcTemplate.query(JdbcTemplate.java:456)
+	at com.testfork.wechatgate.dao.impl.WechatDaoImpl.getAppInfos(WechatDaoImpl.java:31)
+	at com.testfork.wechatgate.dao.impl.WechatDaoImpl$$FastClassBySpringCGLIB$$9071104a.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:204)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:747)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:185)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689)
+	at com.testfork.wechatgate.dao.impl.WechatDaoImpl$$EnhancerBySpringCGLIB$$322cb263.getAppInfos(<generated>)
+	at com.testfork.wechatgate.task.WechatTokenTask.RefreshAccessToken(WechatTokenTask.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.SQLError.createCommunicationsException(SQLError.java:990)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:342)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2188)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2221)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2016)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:776)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:117)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:123)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:365)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:194)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:460)
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:534)
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115)
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:151)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
+	... 26 common frames omitted
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:211)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:301)
+	... 49 common frames omitted
+
+2019-02-20 11:37:25.904  INFO 3460 --- [Thread-3] .context.support.GenericWebApplicationContext.doClose:993 : Closing org.springframework.web.context.support.GenericWebApplicationContext@3daf7722: startup date [Wed Feb 20 11:33:43 CST 2019]; root of context hierarchy
+2019-02-20 11:37:51.991  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration:308 : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testfork.wechatgate.CollectionTest], using SpringBootContextLoader
+2019-02-20 11:37:52.010  INFO   --- [main] rk.test.context.support.AbstractContextLoader.generateDefaultLocations:264 : Could not detect default resource locations for test class [com.testfork.wechatgate.CollectionTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-20 11:37:52.012  INFO   --- [main] xt.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 : Could not detect default configuration classes for test class [com.testfork.wechatgate.CollectionTest]: CollectionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-20 11:37:52.451  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:244 : Found @SpringBootConfiguration com.testfork.wechatgate.WechatGateApplication for test class com.testfork.wechatgate.CollectionTest
+2019-02-20 11:37:52.825  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-20 11:37:53.198  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getTestExecutionListeners:177 : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d9d0818, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@221a3fa4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@451001e5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2b40ff9c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3e08ff24, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4d1c005e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8462f31, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@24569dba, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5ddeb7cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@70ed52de, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@496bc455, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@59402b8f]
+2019-02-20 11:37:54.369  INFO 3483 --- [main] com.testfork.wechatgate.CollectionTest       .logStarting:50 : Starting CollectionTest on xubin.local with PID 3483 (started by xingshulin in /Users/xingshulin/ownCode/wechatgate)
+2019-02-20 11:37:54.371  INFO 3483 --- [main] com.testfork.wechatgate.CollectionTest       .logStartupProfileInfo:659 : No active profile set, falling back to default profiles: default
+2019-02-20 11:37:54.479  INFO 3483 --- [main] .context.support.GenericWebApplicationContext.prepareRefresh:590 : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3daf7722: startup date [Wed Feb 20 11:37:54 CST 2019]; root of context hierarchy
+2019-02-20 11:37:55.979  INFO 3483 --- [main] sitory.config.RepositoryConfigurationDelegate.multipleStoresDetected:163 : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-02-20 11:37:56.992  INFO 3483 --- [main] RegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:328 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$187ec860] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-20 11:37:57.486  INFO 3483 --- [main] org.redisson.Version                         .logVersion:41 : Redisson 3.5.4
+2019-02-20 11:37:57.910  INFO 3483 --- [redisson-netty-1-1] redisson.connection.pool.MasterConnectionPool.operationComplete:143 : 10 connections initialized for /127.0.0.1:6379
+2019-02-20 11:37:57.911  INFO 3483 --- [redisson-netty-1-2] on.connection.pool.MasterPubSubConnectionPool.operationComplete:143 : 1 connections initialized for /127.0.0.1:6379
+2019-02-20 11:37:59.148  INFO 3483 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:37:59.761  INFO 3483 --- [main] ethod.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache:574 : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3daf7722: startup date [Wed Feb 20 11:37:54 CST 2019]; root of context hierarchy
+2019-02-20 11:37:59.899  INFO 3483 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/resource/same/{id}]}" onto public com.testfork.wechatgate.domain.ResultInfo com.testfork.wechatgate.controller.DistributeLockController.forSameResource(java.lang.Integer)
+2019-02-20 11:37:59.902  INFO 3483 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/wx/sign]}" onto public java.lang.String com.testfork.wechatgate.controller.WechatMessageController.verify(javax.servlet.http.HttpServletRequest) throws com.testfork.wechatgate.exception.BusinessException
+2019-02-20 11:37:59.906  INFO 3483 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-20 11:37:59.908  INFO 3483 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-20 11:37:59.962  INFO 3483 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:37:59.963  INFO 3483 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:38:00.646  INFO 3483 --- [main] notation.ScheduledAnnotationBeanPostProcessor.finishRegistration:275 : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-20 11:38:00.656  INFO 3483 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:46 : 定时执行刷新微信TOKEN任务:请求URL-https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s
+2019-02-20 11:38:00.675  INFO 3483 --- [main] com.testfork.wechatgate.CollectionTest       .logStarted:59 : Started CollectionTest in 7.383 seconds (JVM running for 10.638)
+2019-02-20 11:38:00.678  INFO 3483 --- [pool-3-thread-1] com.zaxxer.hikari.HikariDataSource           .getConnection:110 : HikariPool-1 - Starting...
+2019-02-20 11:38:01.319  INFO 3483 --- [pool-3-thread-1] com.zaxxer.hikari.HikariDataSource           .getConnection:123 : HikariPool-1 - Start completed.
+2019-02-20 11:38:02.309  INFO 3483 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:56 : 获取access_token接口响应结果：{"access_token":"18_0YuLOYelT-9r3HTYrKkDK3WDFUCiZbfj_8h81fxmpRqeKu6qPMee53v2V40rWHVR3f4e6joHw1Md6DVrJeOPzkxY7YZQaMCBZpmNVdFJJfoPcsWBsr_-w4tqef-o5l3UWrZTBcyq9EMw2AHuAZKgAJAFEP","expires_in":7200}
+2019-02-20 11:38:02.695 ERROR 3483 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:66 : 解析微信返回结果异常
+
+org.springframework.dao.InvalidDataAccessApiUsageException: NOAUTH Authentication required.; nested exception is redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:64)
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.convertJedisAccessException(JedisConnection.java:181)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.convertJedisAccessException(JedisStringCommands.java:757)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:290)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.setEx(DefaultedRedisConnection.java:252)
+	at org.springframework.data.redis.connection.DefaultStringRedisConnection.setEx(DefaultStringRedisConnection.java:953)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.potentiallyUsePsetEx(DefaultValueOperations.java:230)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.doInRedis(DefaultValueOperations.java:223)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:224)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:95)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:218)
+	at com.testfork.wechatgate.task.WechatTokenTask.RefreshAccessToken(WechatTokenTask.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at redis.clients.jedis.Protocol.processError(Protocol.java:127)
+	at redis.clients.jedis.Protocol.process(Protocol.java:161)
+	at redis.clients.jedis.Protocol.read(Protocol.java:215)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:340)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:239)
+	at redis.clients.jedis.BinaryJedis.setex(BinaryJedis.java:616)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:288)
+	... 22 common frames omitted
+
+2019-02-20 11:38:02.774  INFO 3483 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:56 : 获取access_token接口响应结果：{"access_token":"18_W8E3S_K81jLAXgjOrKkDK3WDFUCiZbfj_8h81fxmpRqeKu6qPMee53v2V43v7brYH9TqKk0zd43P6mC7rCnoVBgGCoZ3RScUrOBI3pQBHxhvR7Gci8XkXIZbSuFbYaam1NLzUMGnTvUNOFwXUHFgAJAQDB","expires_in":7199}
+2019-02-20 11:38:02.776 ERROR 3483 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:66 : 解析微信返回结果异常
+
+org.springframework.dao.InvalidDataAccessApiUsageException: NOAUTH Authentication required.; nested exception is redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:64)
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.convertJedisAccessException(JedisConnection.java:181)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.convertJedisAccessException(JedisStringCommands.java:757)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:290)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.setEx(DefaultedRedisConnection.java:252)
+	at org.springframework.data.redis.connection.DefaultStringRedisConnection.setEx(DefaultStringRedisConnection.java:953)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.potentiallyUsePsetEx(DefaultValueOperations.java:230)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.doInRedis(DefaultValueOperations.java:223)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:224)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:95)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:218)
+	at com.testfork.wechatgate.task.WechatTokenTask.RefreshAccessToken(WechatTokenTask.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at redis.clients.jedis.Protocol.processError(Protocol.java:127)
+	at redis.clients.jedis.Protocol.process(Protocol.java:161)
+	at redis.clients.jedis.Protocol.read(Protocol.java:215)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:340)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:239)
+	at redis.clients.jedis.BinaryJedis.setex(BinaryJedis.java:616)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:288)
+	... 22 common frames omitted
+
+2019-02-20 11:38:11.013  INFO 3483 --- [Thread-3] .context.support.GenericWebApplicationContext.doClose:993 : Closing org.springframework.web.context.support.GenericWebApplicationContext@3daf7722: startup date [Wed Feb 20 11:37:54 CST 2019]; root of context hierarchy
+2019-02-20 11:38:11.020  INFO 3483 --- [Thread-3] com.zaxxer.hikari.HikariDataSource           .close:381 : HikariPool-1 - Shutdown initiated...
+2019-02-20 11:38:11.029  INFO 3483 --- [Thread-3] com.zaxxer.hikari.HikariDataSource           .close:383 : HikariPool-1 - Shutdown completed.
+2019-02-20 11:50:04.144  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration:308 : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testfork.wechatgate.CollectionTest], using SpringBootContextLoader
+2019-02-20 11:50:04.162  INFO   --- [main] rk.test.context.support.AbstractContextLoader.generateDefaultLocations:264 : Could not detect default resource locations for test class [com.testfork.wechatgate.CollectionTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-20 11:50:04.164  INFO   --- [main] xt.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 : Could not detect default configuration classes for test class [com.testfork.wechatgate.CollectionTest]: CollectionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-20 11:50:04.472  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:244 : Found @SpringBootConfiguration com.testfork.wechatgate.WechatGateApplication for test class com.testfork.wechatgate.CollectionTest
+2019-02-20 11:50:04.839  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-20 11:50:05.187  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getTestExecutionListeners:177 : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d9d0818, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@221a3fa4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@451001e5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2b40ff9c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3e08ff24, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4d1c005e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8462f31, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@24569dba, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5ddeb7cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@70ed52de, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@496bc455, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@59402b8f]
+2019-02-20 11:50:06.212  INFO 3531 --- [main] com.testfork.wechatgate.CollectionTest       .logStarting:50 : Starting CollectionTest on xubin.local with PID 3531 (started by xingshulin in /Users/xingshulin/ownCode/wechatgate)
+2019-02-20 11:50:06.214  INFO 3531 --- [main] com.testfork.wechatgate.CollectionTest       .logStartupProfileInfo:659 : No active profile set, falling back to default profiles: default
+2019-02-20 11:50:06.273  INFO 3531 --- [main] .context.support.GenericWebApplicationContext.prepareRefresh:590 : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6af9fcb2: startup date [Wed Feb 20 11:50:06 CST 2019]; root of context hierarchy
+2019-02-20 11:50:07.739  INFO 3531 --- [main] sitory.config.RepositoryConfigurationDelegate.multipleStoresDetected:163 : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-02-20 11:50:08.785  INFO 3531 --- [main] RegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:328 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c293d4e1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-20 11:50:08.865  WARN 3531 --- [main] .context.support.GenericWebApplicationContext.refresh:558 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisConfig': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'redis.sentinel.nodes' in value "${redis.sentinel.nodes}"
+2019-02-20 11:50:08.882  INFO 3531 --- [main] ging.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport:101 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-02-20 11:50:08.888 ERROR 3531 --- [main] org.springframework.boot.SpringApplication   .reportFailure:842 : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisConfig': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'redis.sentinel.nodes' in value "${redis.sentinel.nodes}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:379)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'redis.sentinel.nodes' in value "${redis.sentinel.nodes}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:839)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1086)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	... 40 common frames omitted
+
+2019-02-20 11:50:08.911 ERROR 3531 --- [main] ringframework.test.context.TestContextManager.prepareTestInstance:250 : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7d9d0818] to prepare test instance [com.testfork.wechatgate.CollectionTest@5e4fa1da]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisConfig': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'redis.sentinel.nodes' in value "${redis.sentinel.nodes}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:379)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'redis.sentinel.nodes' in value "${redis.sentinel.nodes}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237)
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211)
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:839)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1086)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	... 40 common frames omitted
+
+2019-02-20 11:50:45.247  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration:308 : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testfork.wechatgate.CollectionTest], using SpringBootContextLoader
+2019-02-20 11:50:45.268  INFO   --- [main] rk.test.context.support.AbstractContextLoader.generateDefaultLocations:264 : Could not detect default resource locations for test class [com.testfork.wechatgate.CollectionTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-20 11:50:45.271  INFO   --- [main] xt.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 : Could not detect default configuration classes for test class [com.testfork.wechatgate.CollectionTest]: CollectionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-20 11:50:45.534  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:244 : Found @SpringBootConfiguration com.testfork.wechatgate.WechatGateApplication for test class com.testfork.wechatgate.CollectionTest
+2019-02-20 11:50:45.875  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-20 11:50:46.251  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getTestExecutionListeners:177 : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d9d0818, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@221a3fa4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@451001e5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2b40ff9c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3e08ff24, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4d1c005e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8462f31, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@24569dba, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5ddeb7cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@70ed52de, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@496bc455, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@59402b8f]
+2019-02-20 11:50:47.219  INFO 3540 --- [main] com.testfork.wechatgate.CollectionTest       .logStarting:50 : Starting CollectionTest on xubin.local with PID 3540 (started by xingshulin in /Users/xingshulin/ownCode/wechatgate)
+2019-02-20 11:50:47.221  INFO 3540 --- [main] com.testfork.wechatgate.CollectionTest       .logStartupProfileInfo:659 : No active profile set, falling back to default profiles: default
+2019-02-20 11:50:47.277  INFO 3540 --- [main] .context.support.GenericWebApplicationContext.prepareRefresh:590 : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6af9fcb2: startup date [Wed Feb 20 11:50:47 CST 2019]; root of context hierarchy
+2019-02-20 11:50:48.442  INFO 3540 --- [main] sitory.config.RepositoryConfigurationDelegate.multipleStoresDetected:163 : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-02-20 11:50:49.424  INFO 3540 --- [main] RegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:328 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e81ef243] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-20 11:50:49.876  INFO 3540 --- [main] org.redisson.Version                         .logVersion:41 : Redisson 3.5.4
+2019-02-20 11:50:50.243  INFO 3540 --- [redisson-netty-1-8] redisson.connection.pool.MasterConnectionPool.operationComplete:143 : 10 connections initialized for /127.0.0.1:6379
+2019-02-20 11:50:50.243  INFO 3540 --- [redisson-netty-1-2] on.connection.pool.MasterPubSubConnectionPool.operationComplete:143 : 1 connections initialized for /127.0.0.1:6379
+2019-02-20 11:50:50.549  WARN 3540 --- [main] .context.support.GenericWebApplicationContext.refresh:558 : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'wechatTokenTask': Unsatisfied dependency expressed through field 'stringRedisTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisTemplate' defined in class path resource [com/testfork/wechatgate/config/RedisConfig.class]: Unsatisfied dependency expressed through method 'redisTemplate' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.data.redis.connection.jedis.JedisConnectionFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-02-20 11:50:50.564  INFO 3540 --- [main] ging.ConditionEvaluationReportLoggingListener.logAutoConfigurationReport:101 : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-02-20 11:50:51.068 ERROR 3540 --- [main] ot.diagnostics.LoggingFailureAnalysisReporter.report:42 : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method redisTemplate in com.testfork.wechatgate.config.RedisConfig required a bean of type 'org.springframework.data.redis.connection.jedis.JedisConnectionFactory' that could not be found.
+	- Bean method 'redisConnectionFactory' in 'JedisConnectionConfiguration' not loaded because @ConditionalOnMissingBean (types: org.springframework.data.redis.connection.RedisConnectionFactory; SearchStrategy: all) found beans of type 'org.springframework.data.redis.connection.RedisConnectionFactory' jedisConnectionFactory
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'org.springframework.data.redis.connection.jedis.JedisConnectionFactory' in your configuration.
+
+2019-02-20 11:50:51.073 ERROR 3540 --- [main] ringframework.test.context.TestContextManager.prepareTestInstance:250 : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@7d9d0818] to prepare test instance [com.testfork.wechatgate.CollectionTest@50850539]
+
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:125)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:108)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:227)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:246)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:97)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:190)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:68)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'wechatTokenTask': Unsatisfied dependency expressed through field 'stringRedisTemplate'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisTemplate' defined in class path resource [com/testfork/wechatgate/config/RedisConfig.class]: Unsatisfied dependency expressed through method 'redisTemplate' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.data.redis.connection.jedis.JedisConnectionFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:587)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:91)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:373)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1344)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:760)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:869)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:395)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:327)
+	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:138)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:117)
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisTemplate' defined in class path resource [com/testfork/wechatgate/config/RedisConfig.class]: Unsatisfied dependency expressed through method 'redisTemplate' parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.data.redis.connection.jedis.JedisConnectionFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:729)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:470)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1250)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:501)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:228)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:251)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1138)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:584)
+	... 42 common frames omitted
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.data.redis.connection.jedis.JedisConnectionFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoMatchingBeanFound(DefaultListableBeanFactory.java:1509)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1104)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1065)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:815)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:721)
+	... 55 common frames omitted
+
+2019-02-20 11:52:46.214  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration:308 : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testfork.wechatgate.CollectionTest], using SpringBootContextLoader
+2019-02-20 11:52:46.230  INFO   --- [main] rk.test.context.support.AbstractContextLoader.generateDefaultLocations:264 : Could not detect default resource locations for test class [com.testfork.wechatgate.CollectionTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-20 11:52:46.233  INFO   --- [main] xt.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 : Could not detect default configuration classes for test class [com.testfork.wechatgate.CollectionTest]: CollectionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-20 11:52:46.683  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:244 : Found @SpringBootConfiguration com.testfork.wechatgate.WechatGateApplication for test class com.testfork.wechatgate.CollectionTest
+2019-02-20 11:52:47.021  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-20 11:52:47.386  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getTestExecutionListeners:177 : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7d9d0818, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@221a3fa4, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@451001e5, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2b40ff9c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3e08ff24, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4d1c005e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@8462f31, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@24569dba, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5ddeb7cb, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@70ed52de, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@496bc455, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@59402b8f]
+2019-02-20 11:52:48.308  INFO 3557 --- [main] com.testfork.wechatgate.CollectionTest       .logStarting:50 : Starting CollectionTest on xubin.local with PID 3557 (started by xingshulin in /Users/xingshulin/ownCode/wechatgate)
+2019-02-20 11:52:48.310  INFO 3557 --- [main] com.testfork.wechatgate.CollectionTest       .logStartupProfileInfo:659 : No active profile set, falling back to default profiles: default
+2019-02-20 11:52:48.380  INFO 3557 --- [main] .context.support.GenericWebApplicationContext.prepareRefresh:590 : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6af9fcb2: startup date [Wed Feb 20 11:52:48 CST 2019]; root of context hierarchy
+2019-02-20 11:52:49.544  INFO 3557 --- [main] sitory.config.RepositoryConfigurationDelegate.multipleStoresDetected:163 : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-02-20 11:52:50.517  INFO 3557 --- [main] RegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:328 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$28cfbdfe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-20 11:52:50.948  INFO 3557 --- [main] org.redisson.Version                         .logVersion:41 : Redisson 3.5.4
+2019-02-20 11:52:51.296  INFO 3557 --- [redisson-netty-1-8] on.connection.pool.MasterPubSubConnectionPool.operationComplete:143 : 1 connections initialized for /127.0.0.1:6379
+2019-02-20 11:52:51.296  INFO 3557 --- [redisson-netty-1-2] redisson.connection.pool.MasterConnectionPool.operationComplete:143 : 10 connections initialized for /127.0.0.1:6379
+2019-02-20 11:52:52.363  INFO 3557 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:52:52.988  INFO 3557 --- [main] ethod.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache:574 : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6af9fcb2: startup date [Wed Feb 20 11:52:48 CST 2019]; root of context hierarchy
+2019-02-20 11:52:53.115  INFO 3557 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/resource/same/{id}]}" onto public com.testfork.wechatgate.domain.ResultInfo com.testfork.wechatgate.controller.DistributeLockController.forSameResource(java.lang.Integer)
+2019-02-20 11:52:53.118  INFO 3557 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/wx/sign]}" onto public java.lang.String com.testfork.wechatgate.controller.WechatMessageController.verify(javax.servlet.http.HttpServletRequest) throws com.testfork.wechatgate.exception.BusinessException
+2019-02-20 11:52:53.123  INFO 3557 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-20 11:52:53.125  INFO 3557 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-20 11:52:53.190  INFO 3557 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:52:53.191  INFO 3557 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:52:53.954  INFO 3557 --- [main] notation.ScheduledAnnotationBeanPostProcessor.finishRegistration:275 : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-20 11:52:53.966  INFO 3557 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:46 : 定时执行刷新微信TOKEN任务:请求URL-https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s
+2019-02-20 11:52:53.980  INFO 3557 --- [main] com.testfork.wechatgate.CollectionTest       .logStarted:59 : Started CollectionTest in 6.465 seconds (JVM running for 9.401)
+2019-02-20 11:52:53.996  INFO 3557 --- [pool-3-thread-1] com.zaxxer.hikari.HikariDataSource           .getConnection:110 : HikariPool-1 - Starting...
+2019-02-20 11:52:54.578  INFO 3557 --- [pool-3-thread-1] com.zaxxer.hikari.HikariDataSource           .getConnection:123 : HikariPool-1 - Start completed.
+2019-02-20 11:52:55.437  INFO 3557 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:56 : 获取access_token接口响应结果：{"access_token":"18_1hUEACIYmy90COsKDX8zhBZRogDoLYn8MYy9HvQZOd3hSbCvp9SsEHjiBleEHDeH1ABFWMrl4LX9z8uSqi8Gy6wNc_MDGT3ozYVuNI3B8nzZd9OEuQWYneA0zMWSypCh4u5yESLtxjHmSyUsKHFfADAXUS","expires_in":7200}
+2019-02-20 11:52:55.699 ERROR 3557 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:66 : 解析微信返回结果异常
+
+org.springframework.dao.InvalidDataAccessApiUsageException: NOAUTH Authentication required.; nested exception is redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:64)
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.convertJedisAccessException(JedisConnection.java:181)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.convertJedisAccessException(JedisStringCommands.java:757)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:290)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.setEx(DefaultedRedisConnection.java:252)
+	at org.springframework.data.redis.connection.DefaultStringRedisConnection.setEx(DefaultStringRedisConnection.java:953)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.potentiallyUsePsetEx(DefaultValueOperations.java:230)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.doInRedis(DefaultValueOperations.java:223)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:224)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:95)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:218)
+	at com.testfork.wechatgate.task.WechatTokenTask.RefreshAccessToken(WechatTokenTask.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at redis.clients.jedis.Protocol.processError(Protocol.java:127)
+	at redis.clients.jedis.Protocol.process(Protocol.java:161)
+	at redis.clients.jedis.Protocol.read(Protocol.java:215)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:340)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:239)
+	at redis.clients.jedis.BinaryJedis.setex(BinaryJedis.java:616)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:288)
+	... 22 common frames omitted
+
+2019-02-20 11:52:55.803  INFO 3557 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:56 : 获取access_token接口响应结果：{"access_token":"18_7BleZZOEvlMSlTjNDX8zhBZRogDoLYn8MYy9HvQZOd3hSbCvp9SsEHjiBldZRv8NBf5Ddk5EAQAiV172w39MuA2M7U3mKPT5GwZ5Oxo24EEztpplBNGj-g53RVJp8O-tjWoh3KdMMSln-ZKxSMGfADAVPJ","expires_in":7199}
+2019-02-20 11:52:55.811 ERROR 3557 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:66 : 解析微信返回结果异常
+
+org.springframework.dao.InvalidDataAccessApiUsageException: NOAUTH Authentication required.; nested exception is redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:64)
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.convertJedisAccessException(JedisConnection.java:181)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.convertJedisAccessException(JedisStringCommands.java:757)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:290)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.setEx(DefaultedRedisConnection.java:252)
+	at org.springframework.data.redis.connection.DefaultStringRedisConnection.setEx(DefaultStringRedisConnection.java:953)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.potentiallyUsePsetEx(DefaultValueOperations.java:230)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.doInRedis(DefaultValueOperations.java:223)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:224)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:95)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:218)
+	at com.testfork.wechatgate.task.WechatTokenTask.RefreshAccessToken(WechatTokenTask.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at redis.clients.jedis.Protocol.processError(Protocol.java:127)
+	at redis.clients.jedis.Protocol.process(Protocol.java:161)
+	at redis.clients.jedis.Protocol.read(Protocol.java:215)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:340)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:239)
+	at redis.clients.jedis.BinaryJedis.setex(BinaryJedis.java:616)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:288)
+	... 22 common frames omitted
+
+2019-02-20 11:53:04.264  INFO 3557 --- [Thread-3] .context.support.GenericWebApplicationContext.doClose:993 : Closing org.springframework.web.context.support.GenericWebApplicationContext@6af9fcb2: startup date [Wed Feb 20 11:52:48 CST 2019]; root of context hierarchy
+2019-02-20 11:53:04.270  INFO 3557 --- [Thread-3] com.zaxxer.hikari.HikariDataSource           .close:381 : HikariPool-1 - Shutdown initiated...
+2019-02-20 11:53:04.284  INFO 3557 --- [Thread-3] com.zaxxer.hikari.HikariDataSource           .close:383 : HikariPool-1 - Shutdown completed.
+2019-02-20 11:58:39.862  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.buildDefaultMergedContextConfiguration:308 : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.testfork.wechatgate.CollectionTest], using SpringBootContextLoader
+2019-02-20 11:58:39.914  INFO   --- [main] rk.test.context.support.AbstractContextLoader.generateDefaultLocations:264 : Could not detect default resource locations for test class [com.testfork.wechatgate.CollectionTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2019-02-20 11:58:39.916  INFO   --- [main] xt.support.AnnotationConfigContextLoaderUtils.detectDefaultConfigurationClasses:83 : Could not detect default configuration classes for test class [com.testfork.wechatgate.CollectionTest]: CollectionTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2019-02-20 11:58:40.261  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getOrFindConfigurationClasses:244 : Found @SpringBootConfiguration com.testfork.wechatgate.WechatGateApplication for test class com.testfork.wechatgate.CollectionTest
+2019-02-20 11:58:40.598  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getDefaultTestExecutionListenerClassNames:248 : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2019-02-20 11:58:40.894  INFO   --- [main] est.context.SpringBootTestContextBootstrapper.getTestExecutionListeners:177 : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@65aa6596, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@67389cb8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@419a20a6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@533377b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3383649e, org.springframework.test.context.transaction.TransactionalTestExecutionListener@10fde30a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@f27ea3, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1ce61929, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@346939bf, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4bf3798b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@58670130, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@74e47444]
+2019-02-20 11:58:41.828  INFO 3598 --- [main] com.testfork.wechatgate.CollectionTest       .logStarting:50 : Starting CollectionTest on xubin.local with PID 3598 (started by xingshulin in /Users/xingshulin/ownCode/wechatgate)
+2019-02-20 11:58:41.831  INFO 3598 --- [main] com.testfork.wechatgate.CollectionTest       .logStartupProfileInfo:659 : No active profile set, falling back to default profiles: default
+2019-02-20 11:58:42.004  INFO 3598 --- [main] .context.support.GenericWebApplicationContext.prepareRefresh:590 : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4aa3d36: startup date [Wed Feb 20 11:58:42 CST 2019]; root of context hierarchy
+2019-02-20 11:58:43.468  INFO 3598 --- [main] sitory.config.RepositoryConfigurationDelegate.multipleStoresDetected:163 : Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-02-20 11:58:44.934  INFO 3598 --- [main] RegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:328 : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1265c013] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-02-20 11:58:45.412  INFO 3598 --- [main] org.redisson.Version                         .logVersion:41 : Redisson 3.5.4
+2019-02-20 11:58:45.800  INFO 3598 --- [redisson-netty-1-2] on.connection.pool.MasterPubSubConnectionPool.operationComplete:143 : 1 connections initialized for /127.0.0.1:6379
+2019-02-20 11:58:45.800  INFO 3598 --- [redisson-netty-1-3] redisson.connection.pool.MasterConnectionPool.operationComplete:143 : 10 connections initialized for /127.0.0.1:6379
+2019-02-20 11:58:47.047  INFO 3598 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:58:47.760  INFO 3598 --- [main] ethod.annotation.RequestMappingHandlerAdapter.initControllerAdviceCache:574 : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4aa3d36: startup date [Wed Feb 20 11:58:42 CST 2019]; root of context hierarchy
+2019-02-20 11:58:47.934  INFO 3598 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/resource/same/{id}]}" onto public com.testfork.wechatgate.domain.ResultInfo com.testfork.wechatgate.controller.DistributeLockController.forSameResource(java.lang.Integer)
+2019-02-20 11:58:47.939  INFO 3598 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/wx/sign]}" onto public java.lang.String com.testfork.wechatgate.controller.WechatMessageController.verify(javax.servlet.http.HttpServletRequest) throws com.testfork.wechatgate.exception.BusinessException
+2019-02-20 11:58:47.944  INFO 3598 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2019-02-20 11:58:47.946  INFO 3598 --- [main] ethod.annotation.RequestMappingHandlerMapping.register:547 : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2019-02-20 11:58:48.030  INFO 3598 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:58:48.031  INFO 3598 --- [main] k.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler:373 : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2019-02-20 11:58:48.783  INFO 3598 --- [main] notation.ScheduledAnnotationBeanPostProcessor.finishRegistration:275 : No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+2019-02-20 11:58:48.793  INFO 3598 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:46 : 定时执行刷新微信TOKEN任务:请求URL-https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s
+2019-02-20 11:58:48.822  INFO 3598 --- [main] com.testfork.wechatgate.CollectionTest       .logStarted:59 : Started CollectionTest in 7.715 seconds (JVM running for 11.381)
+2019-02-20 11:58:48.822  INFO 3598 --- [pool-3-thread-1] com.zaxxer.hikari.HikariDataSource           .getConnection:110 : HikariPool-1 - Starting...
+2019-02-20 11:58:49.441  INFO 3598 --- [pool-3-thread-1] com.zaxxer.hikari.HikariDataSource           .getConnection:123 : HikariPool-1 - Start completed.
+2019-02-20 11:58:53.339  INFO 3598 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:56 : 获取access_token接口响应结果：{"access_token":"18_cz5HF12hKdjSITsLgdnFsU3HGSChHiKQoOKlz6HzPAZ_sgPIkh9o3_iJLR3F3PkwjCl5ks4hx2tWq_BNtnLy_aKookXcEl5vCKqcpr4Y2nlSgfXXCA1DTqqe5i-Y9KIqC9yI-Z1tG1JmrfqtEWAaAGAMEI","expires_in":7200}
+2019-02-20 11:58:53.653 ERROR 3598 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:66 : 解析微信返回结果异常
+
+org.springframework.dao.InvalidDataAccessApiUsageException: NOAUTH Authentication required.; nested exception is redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:64)
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.convertJedisAccessException(JedisConnection.java:181)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.convertJedisAccessException(JedisStringCommands.java:757)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:290)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.setEx(DefaultedRedisConnection.java:252)
+	at org.springframework.data.redis.connection.DefaultStringRedisConnection.setEx(DefaultStringRedisConnection.java:953)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.potentiallyUsePsetEx(DefaultValueOperations.java:230)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.doInRedis(DefaultValueOperations.java:223)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:224)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:95)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:218)
+	at com.testfork.wechatgate.task.WechatTokenTask.RefreshAccessToken(WechatTokenTask.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at redis.clients.jedis.Protocol.processError(Protocol.java:127)
+	at redis.clients.jedis.Protocol.process(Protocol.java:161)
+	at redis.clients.jedis.Protocol.read(Protocol.java:215)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:340)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:239)
+	at redis.clients.jedis.BinaryJedis.setex(BinaryJedis.java:616)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:288)
+	... 22 common frames omitted
+
+2019-02-20 11:58:53.802  INFO 3598 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:56 : 获取access_token接口响应结果：{"access_token":"18_wUr-8MOmIRGGNzgbgdnFsU3HGSChHiKQoOKlz6HzPAZ_sgPIkh9o3_iJLR25L0Fb-VP0Axk5gs1oAUOy8LWfA6m7Nyi-3N6HLpGsa0FfrRQh8kiXWBK0F1smhEywHU8rZd_zVxcMB2pk8eUWVWUaAGAHIG","expires_in":7199}
+2019-02-20 11:58:53.804 ERROR 3598 --- [pool-3-thread-1] com.testfork.wechatgate.task.WechatTokenTask .RefreshAccessToken:66 : 解析微信返回结果异常
+
+org.springframework.dao.InvalidDataAccessApiUsageException: NOAUTH Authentication required.; nested exception is redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:64)
+	at org.springframework.data.redis.connection.jedis.JedisExceptionConverter.convert(JedisExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:44)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:42)
+	at org.springframework.data.redis.connection.jedis.JedisConnection.convertJedisAccessException(JedisConnection.java:181)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.convertJedisAccessException(JedisStringCommands.java:757)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:290)
+	at org.springframework.data.redis.connection.DefaultedRedisConnection.setEx(DefaultedRedisConnection.java:252)
+	at org.springframework.data.redis.connection.DefaultStringRedisConnection.setEx(DefaultStringRedisConnection.java:953)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.potentiallyUsePsetEx(DefaultValueOperations.java:230)
+	at org.springframework.data.redis.core.DefaultValueOperations$4.doInRedis(DefaultValueOperations.java:223)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:224)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:184)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:95)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:218)
+	at com.testfork.wechatgate.task.WechatTokenTask.RefreshAccessToken(WechatTokenTask.java:62)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.scheduling.support.ScheduledMethodRunnable.run(ScheduledMethodRunnable.java:65)
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: redis.clients.jedis.exceptions.JedisDataException: NOAUTH Authentication required.
+	at redis.clients.jedis.Protocol.processError(Protocol.java:127)
+	at redis.clients.jedis.Protocol.process(Protocol.java:161)
+	at redis.clients.jedis.Protocol.read(Protocol.java:215)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:340)
+	at redis.clients.jedis.Connection.getStatusCodeReply(Connection.java:239)
+	at redis.clients.jedis.BinaryJedis.setex(BinaryJedis.java:616)
+	at org.springframework.data.redis.connection.jedis.JedisStringCommands.setEx(JedisStringCommands.java:288)
+	... 22 common frames omitted
+
+2019-02-20 11:58:59.208  INFO 3598 --- [Thread-3] .context.support.GenericWebApplicationContext.doClose:993 : Closing org.springframework.web.context.support.GenericWebApplicationContext@4aa3d36: startup date [Wed Feb 20 11:58:42 CST 2019]; root of context hierarchy
+2019-02-20 11:58:59.215  INFO 3598 --- [Thread-3] com.zaxxer.hikari.HikariDataSource           .close:381 : HikariPool-1 - Shutdown initiated...
+2019-02-20 11:58:59.229  INFO 3598 --- [Thread-3] com.zaxxer.hikari.HikariDataSource           .close:383 : HikariPool-1 - Shutdown completed.

@@ -7,20 +7,23 @@ server:
 spring:
   application:
     name: wechat-gate
-  redis:
-    host: 127.0.0.1
-    password: 123456
-    port: 6379
-    jedis:
-      pool:
-        max-active: 8
-        max-idle: 2
-        max-wait: 1ms
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+db:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    url: jdbc:mysql://localhost:3306/wechat?useUnicode=true&amp;characterEncoding=UTF-8&useSSL=false
+    jdbc-url: jdbc:mysql://localhost:3306/wechat?useUnicode=true&amp;characterEncoding=UTF-8&useSSL=false
     password: 1234567
+
+#redis
+redis:
+  sentinel:
+    master: localhost:6379
+    passwd: 123456
 
 #微信配置
 wechat:
