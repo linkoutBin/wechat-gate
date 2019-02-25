@@ -11,6 +11,11 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: none
+  #rabbitmq:
+    #password: guest
+    #username: guest
+    #host: 192.168.64.65,192.168.64.68
+    #port: 5672
 
 db:
   datasource:
@@ -25,6 +30,7 @@ redis:
     master: localhost:6379
     passwd: 123456
 
+#rabbitmq配置
 #微信配置
 wechat:
   token: testfork

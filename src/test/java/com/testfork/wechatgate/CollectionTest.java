@@ -2,6 +2,7 @@ package com.testfork.wechatgate;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -15,6 +16,8 @@ import java.util.concurrent.TimeUnit;
 import com.testfork.wechatgate.dao.WechatDao;
 import com.testfork.wechatgate.dao.WechatJadDAO;
 import com.testfork.wechatgate.domain.AppInfo;
+import com.testfork.wechatgate.singleton.Singleton;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * Author: xingshulin Date: 2019/2/19 下午2:44
@@ -25,13 +28,26 @@ import com.testfork.wechatgate.domain.AppInfo;
 
 @SpringBootTest
 @RunWith(SpringJUnit4ClassRunner.class)
+@Slf4j
 public class CollectionTest {
+
+  private static final String EXCHANGE = "paymentNotify_exchange";
+  private static final String ROUTINGKEY = "paymentNotify_route_key";
 
   @Autowired
   private WechatJadDAO wechatJadDAO;
 
   @Autowired
   private WechatDao wechatDao;
+
+  @Autowired
+  private RabbitTemplate rabbitTemplate;
+
+  @Test
+  public void messageTest() {
+    rabbitTemplate.convertAndSend(EXCHANGE, ROUTINGKEY, "heheheh");
+    log.info("发送完成");
+  }
 
   @Test
   public void queueTest() {
@@ -50,19 +66,24 @@ public class CollectionTest {
     LinkedList<Integer> list = new LinkedList<>();
     list.add(1);
     Integer num = list.getFirst();
-    System.out.println(num);
+    log.info(num.toString());
   }
 
   @Test
   public void jadTest() {
     List<Integer> ids = wechatJadDAO.getBankIds(1);
-    System.out.println(ids);
+    log.info("结果：{}", ids);
+    Singleton singleton = Singleton.getInstance();
+    singleton.print("hello");
+    Singleton singleton1 = Singleton.getInstance();
+    singleton1.print("world");
+
   }
 
   @Test
   public void jdbcTest() {
     List<AppInfo> appInfos = wechatDao.getAppInfos();
-    System.out.println(appInfos);
+    log.info(appInfos.toString());
   }
 
   public static void main(String[] args) {
@@ -74,7 +95,7 @@ public class CollectionTest {
         for (int i = 0; i < 10; i++) {
           try {
             Thread.sleep(1000);
-            System.out.println(Thread.currentThread().getName() + ":" + i);
+            log.info(Thread.currentThread().getName() + ":" + i);
           } catch (Exception e) {
             e.printStackTrace();
           }
@@ -87,9 +108,10 @@ public class CollectionTest {
     } catch (InterruptedException e) {
       e.printStackTrace();
     }
-    System.out.println("测试结束");
+    log.info("测试结束");
     watch.stop();
-    System.out.println(watch.getTotalTimeSeconds());
+
+    log.info(String.valueOf(watch.getTotalTimeSeconds()));
   }
 
 }
