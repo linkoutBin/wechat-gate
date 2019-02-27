@@ -1,7 +1,5 @@
 package com.testfork.wechatgate.task;
 
-import org.redisson.api.RBucket;
-import org.redisson.api.RedissonClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +13,6 @@ import org.springframework.web.client.RestTemplate;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import com.alibaba.fastjson.JSONObject;
-import com.testfork.wechatgate.config.RedissonConfig;
 import com.testfork.wechatgate.dao.WechatDao;
 import com.testfork.wechatgate.domain.AppInfo;
 
@@ -33,9 +30,6 @@ public class WechatTokenTask {
 
   @Autowired
   private StringRedisTemplate stringRedisTemplate;
-
-  @Autowired
-  private RedissonConfig redissonConfig;
 
   @Autowired
   private WechatDao wechatDao;
@@ -65,10 +59,8 @@ public class WechatTokenTask {
           String accessToken = token.getString("access_token");
           if (StringUtils.hasText(accessToken)) {
             long timeout = token.getLong("expires_in");
-            RedissonClient redissonClient = redissonConfig.getRedissonClient();
-            RBucket<String> rBucket = redissonClient.getBucket(appInfo.getKey());
-            rBucket.set(accessToken, timeout, TimeUnit.SECONDS);
-            //stringRedisTemplate.opsForValue().set(appInfo.getKey(), accessToken, timeout, TimeUnit.SECONDS);
+            stringRedisTemplate.opsForValue()
+                .set(appInfo.getKey(), accessToken, timeout, TimeUnit.SECONDS);
             logger.info("成功获取access_token并写入缓存");
           }
         } catch (Exception je) {

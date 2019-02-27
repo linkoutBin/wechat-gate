@@ -11,11 +11,25 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: none
+  profiles:
+    active: dev
   #rabbitmq:
     #password: guest
     #username: guest
     #host: 192.168.64.65,192.168.64.68
     #port: 5672
+---
+spring:
+  profiles: dev
+  redis:
+    port: 6379
+    url: localhost
+    password: 123456
+    jedis:
+      pool:
+        max-wait: 1
+        max-idle: 8
+        max-active: 8
 
 db:
   datasource:
@@ -23,12 +37,6 @@ db:
     username: root
     jdbc-url: jdbc:mysql://localhost:3306/wechat?useUnicode=true&amp;characterEncoding=UTF-8&useSSL=false
     password: 1234567
-
-#redis
-redis:
-  sentinel:
-    master: localhost:6379
-    passwd: 123456
 
 #rabbitmq配置
 #微信配置

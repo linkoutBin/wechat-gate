@@ -5,10 +5,13 @@ import org.junit.runner.RunWith;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.util.StopWatch;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -42,6 +45,31 @@ public class CollectionTest {
 
   @Autowired
   private RabbitTemplate rabbitTemplate;
+
+  @Autowired
+  private RedisTemplate redisTemplate;
+
+
+  @Test
+  public void testRedis() {
+    AppInfo appInfo = new AppInfo();
+    appInfo.setId("a");
+    appInfo.setWd("wd");
+    redisTemplate.opsForValue().set("appInfo", appInfo);
+    redisTemplate.opsForValue().set("key", "value");
+    Map<String, Object> map = new HashMap<>();
+    map.put("field", "value");
+    map.put("field1", "value1");
+    map.put("field2", "value2");
+    redisTemplate.opsForHash().putAll("hkey", map);
+    map = redisTemplate.opsForHash().entries("hkey");
+    redisTemplate.opsForList().set("list", 0, appInfo);
+    redisTemplate.opsForSet().add("set", new Object[]{1, 2, 3});
+    redisTemplate.opsForZSet().add("zset", appInfo, 1.0);//有序集合 根据分数排序
+    String value = (String) redisTemplate.opsForValue().get("key");
+    AppInfo appInfo1 = (AppInfo) redisTemplate.opsForValue().get("appInfo");
+    log.info("获取到的值：appInfo:{},key:{},map:{}", appInfo1, value, map);
+  }
 
   @Test
   public void messageTest() {
