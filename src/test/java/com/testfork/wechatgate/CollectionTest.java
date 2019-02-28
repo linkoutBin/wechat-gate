@@ -63,6 +63,7 @@ public class CollectionTest {
     map.put("field2", "value2");
     redisTemplate.opsForHash().putAll("hkey", map);
     map = redisTemplate.opsForHash().entries("hkey");
+    redisTemplate.opsForList().leftPush("list", appInfo);
     redisTemplate.opsForList().set("list", 0, appInfo);
     redisTemplate.opsForSet().add("set", new Object[]{1, 2, 3});
     redisTemplate.opsForZSet().add("zset", appInfo, 1.0);//有序集合 根据分数排序

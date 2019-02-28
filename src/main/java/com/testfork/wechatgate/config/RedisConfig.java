@@ -1,18 +1,23 @@
 package com.testfork.wechatgate.config;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.RedisNode;
+import org.springframework.data.redis.connection.RedisSentinelConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
+import java.util.ArrayList;
+import java.util.List;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectMapper.DefaultTyping;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @Author: xingshulin
@@ -21,7 +26,17 @@ import com.fasterxml.jackson.databind.ObjectMapper.DefaultTyping;
  * @Version: 1.0
  **/
 @Configuration
+@Slf4j
 public class RedisConfig {
+
+  @Value("${redis.sentinel.master}")
+  private String master;
+
+  @Value("${redis.sentinel.nodes}")
+  private String nodes;
+
+  @Value("${redis.sentinel.password}")
+  private String password;
 
   @Bean
   public StringRedisTemplate stringRedisTemplate(RedisConnectionFactory redisConnectionFactory) {
@@ -54,8 +69,20 @@ public class RedisConfig {
   }
 
   @Bean
-  @ConfigurationProperties(prefix = "spring.redis")
   public RedisConnectionFactory jedisConnectionFactory() {
-    return new JedisConnectionFactory();
+    log.info("实例化redis工厂类：master：{},nodes:{},passwd:{}", master, nodes, password);
+    RedisSentinelConfiguration redisSentinelConfiguration = new RedisSentinelConfiguration();
+    String[] sentinels = nodes.split(",");
+    List<RedisNode> nodeList = new ArrayList<>();
+    for (String sentinel : sentinels) {
+      String[] node = sentinel.split(":");
+      nodeList.add(RedisNode.newRedisNode().listeningAt(node[0], Integer.valueOf(node[1])).build());
+    }
+    redisSentinelConfiguration.master(master).setSentinels(nodeList);
+
+    JedisConnectionFactory jedisConnectionFactory = new JedisConnectionFactory(
+        redisSentinelConfiguration);
+    jedisConnectionFactory.setPassword(password);
+    return jedisConnectionFactory;
   }
 }

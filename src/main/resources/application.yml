@@ -21,15 +21,21 @@ spring:
 ---
 spring:
   profiles: dev
-  redis:
-    port: 6379
-    url: localhost
+redis:
+  sentinel:
+    master: mymaster
     password: 123456
-    jedis:
-      pool:
-        max-wait: 1
-        max-idle: 8
-        max-active: 8
+    nodes: 127.0.0.1:26379,127.0.0.1:26380,127.0.0.1:26381
+  #单点配置
+  #redis:
+    #port: 6379
+    #url: localhost
+    #password: 123456
+    #jedis:
+      #pool:
+        #max-wait: 1
+        #max-idle: 8
+        #max-active: 8
 
 db:
   datasource:
